@@ -28,7 +28,7 @@ class Ansiterm:
         """Initializes the ansiterm with rows*cols white-on-black spaces"""
         self.rows = rows
         self.cols = cols
-        self.tiles = [Tile() for _ in xrange(rows * cols)]
+        self.tiles = [Tile() for _ in range(rows * cols)]
         self.cursor = {
             'x': 0,
             'y': 0,
@@ -147,7 +147,7 @@ class Ansiterm:
             else:
                 raise Exception('Unknown argument for J parameter: '
                                 '%s (input=%r)' % (numbers, input[:20]))
-            for i in xrange(*range_):
+            for i in range(*range_):
                 self.tiles[i].reset()
         # Clears (parts of) the line
         elif char == 'K':
@@ -163,7 +163,7 @@ class Ansiterm:
             else:
                 raise Exception('Unknown argument for K parameter: '
                                 '%s (input=%r)' % (numbers, input[:20]))
-            for i in xrange(*range_):
+            for i in range(*range_):
                 self.tiles[i].reset()
         # Move cursor up
         elif char == 'A':

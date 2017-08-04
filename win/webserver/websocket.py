@@ -9,6 +9,7 @@ import pty
 import os
 import sys
 import socket
+import colorama
 
 def read_game_data(socketHandler, message):
     data_str = message#str(message, 'UTF-8')
@@ -21,8 +22,9 @@ def read_game_data(socketHandler, message):
         print(rlist, wlist, xlist)
         for f in rlist:
             output = os.read(f, 1024) # This is used because it doesn't block
-            print(bytes(output))
-            socketHandler.write_message(output)
+            string = bytes(output)
+            print(string)
+            socketHandler.write_message(string)
             sys.stdout.flush()
     print("**ALL COMPLETED**")
 
@@ -54,6 +56,7 @@ application = tornado.web.Application([
  
 if __name__ == "__main__":
     master, slave = pty.openpty()
+
 
     process = subprocess.Popen('/home/mango/webhack/nethack-3.6.0/src/nethack', 
 #process = subprocess.Popen('python3 dummy.py', 
