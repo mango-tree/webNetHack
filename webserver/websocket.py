@@ -58,7 +58,7 @@ if __name__ == "__main__":
     master, slave = pty.openpty()
 
 
-    process = subprocess.Popen('/home/mango/webhack/nethack-3.6.0/src/nethack', 
+    process = subprocess.Popen('../nethack/src/nethack', 
 #process = subprocess.Popen('python3 dummy.py', 
                 #stdin=master,#subprocess.PIPE, 
                 stdin=slave,
