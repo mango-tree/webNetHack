@@ -13,8 +13,8 @@
 COMPILEREVISION?=1
 
 # this is the chroot dir
-PREFIX=$(wildcard ~)/nh/install
-
+#PREFIX=$(wildcard ~)/nh/install
+PREFIX = $(shell pwd)/../../../install
 # this is the dir where NetHack is inside the chroot
 HACKDIR=/nh.$(shell date +%Y%m%d)-$(COMPILEREVISION)
 INSTDIR=$(PREFIX)$(HACKDIR)
