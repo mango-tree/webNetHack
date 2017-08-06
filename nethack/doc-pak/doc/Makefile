@@ -14,7 +14,8 @@ MAKEFILE_DOC=1
 
 
 #PREFIX=/usr
-PREFIX=$(wildcard ~)/nh/install
+#PREFIX=$(wildcard ~)/nh/install
+PREFIX=$(shell pwd)/install
 HACKDIR=$(PREFIX)/lib/games/$(GAME)dir
 SHELLDIR = $(PREFIX)/games
 INSTDIR=$(HACKDIR)
