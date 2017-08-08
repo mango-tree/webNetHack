@@ -114,6 +114,8 @@ p {
  * By default, a header is black/white, and has some styles for its <h2> name.
  */
 .play-button {
+    padding-top: 10px;
+    padding-bottom: 20px;    
     background: #2c4985;
     color: #fff;
 }
