@@ -3,6 +3,11 @@ var gameboard = [];
 for (var i = 0; i < 25; i++){
     gameboard[i] = [];
 } // gameboard is 25 lines, 80 columns
+for (var i = 0; i < 25; i++) {
+    for (var j = 0; j < 80; j++) { 
+        gameboard[i][j] = "";
+    }
+}
 connect();
 
 function connect() {
