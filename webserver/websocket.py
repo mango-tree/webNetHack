@@ -65,7 +65,8 @@ if __name__ == "__main__":
                 stdout=slave,
                 stderr=slave,
                 shell=True,
-                close_fds=True)
+                close_fds=True,
+                cwd=os.path.dirname(os.path.realpath(__file__)))
 
     process.stdin=os.fdopen(master, 'wb')
     process.stdout=os.fdopen(master, 'rb')
