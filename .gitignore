@@ -155,3 +155,15 @@ ENV/
 /site
 
 # End of https://www.gitignore.io/api/c,python
+
+# Nethack compile binary
+nethack/install/
+nethack/src/nethack
+nethack/util/dgn_comp
+nethack/util/dlb
+nethack/util/lev_comp
+nethack/util/makedefs
+nethack/util/recover
+nethack/src/config.h-t
+nethack/src/hack.h-t
+
